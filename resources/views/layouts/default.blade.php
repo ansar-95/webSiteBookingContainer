@@ -49,9 +49,9 @@
                             Réservation
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Consulter vos réservations </a>
+                            <a class="dropdown-item" href="{{route("ConsulterReservation") }}">">Consulter vos réservations </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="">Effectuer une réservation</a>
+                            <a class="dropdown-item" href="{{route("SaisirReservation")}}">Effectuer une réservation</a>
                             <a class="dropdown-item" href="">Annuler une réservation</a>
 
 
@@ -88,7 +88,7 @@
                 </ul>
 
                 @if (!session()->exists('connected'))
-                <form action="" method="post" class="form-inline my-2 my-lg-0">
+                <form action="{{route('AuthentificationCompteUtilisateur')}}" method="post" class="form-inline my-2 my-lg-0">
                     {{ csrf_field() }}                                       
                     <input class="form-control mr-sm-2" type="text" name="identifiant" id="identifiant" placeholder="Identifiant" aria-label="Identifiant">
                     <input type="password" class="form-control mr-sm-2" name="motDePasse" id="motDePasse" placeholder="Mot de Passe" aria-label="Mot de Passe">
