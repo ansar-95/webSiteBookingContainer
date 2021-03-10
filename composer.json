@@ -10,8 +10,15 @@
         "khill/lavacharts": "^3.1",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "twbs/bootstrap": "^4.3"
+        "twbs/bootstrap": "^4.3",
+        "zendframework/zendframework": "2.2.7",
+        "propel/propel": "~2.0@dev",
+        "khill/lavacharts" : "3.1.*"
+
     },
+    
+    
+
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",

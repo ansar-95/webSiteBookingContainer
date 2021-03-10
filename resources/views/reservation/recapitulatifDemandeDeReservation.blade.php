@@ -27,17 +27,19 @@
 
          
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            
-        </tr>
-        
+    @foreach($CollectionlignesReservation as $uneLigneDeReservation )
+     <tr>
+        <td>{{ $uneLigneDeReservation["codeTypeContainer"]}}</td>
+        <td>{{ $uneLigneDeReservation["libelleTypeContainer"]}}</td>
+        <td>{{ $uneLigneDeReservation["longueurCont"] }}</td>
+        <td>{{ $uneLigneDeReservation["largeurCont"] }}</td>
+        <td>{{ $uneLigneDeReservation["hauteurCont"] }}</td>
+        <td>{{ $uneLigneDeReservation["poidsCont"] }}</td>
+        <td>{{ $uneLigneDeReservation["tare"] }}</td>
+        <td>{{ $uneLigneDeReservation["capaciteDeCharge"]}}</td>
+        <td>{{ $uneLigneDeReservation["qteReserver"] }}</td> 
+     </tr>
+    @endforeach    
         
     </tbody>
 </table>

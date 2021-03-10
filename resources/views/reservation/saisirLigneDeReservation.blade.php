@@ -8,7 +8,7 @@
 
 @section('content')
 
-<form action="" method="post">
+<form action="{{route("AjouterLigneReservation")}}" method="post">
     {{ csrf_field() }}
     <div class="row justify-content-around">
         <div class="col-lg-5">
@@ -21,7 +21,10 @@
                         <label for="container">Liste des containers</label>
                         <select class="custom-select" id="container" name="container">
                             
-                            <option value=""> </option>
+                             @foreach($typeContainer as $unTypeContainer)
+                                <option value="{{ $unTypeContainer["numTypeContainer"] }}">
+                               {{ $unTypeContainer["libelleTypeContainer"] }}</option>
+                            @endforeach
                             
                         </select> 
 
@@ -48,9 +51,15 @@
                     <table class="table">
                         <thead class="thead-light">
                             <tr>
-
-                                <th scope="col">Type de container</th>
-                                <th scope="col">Quantité</th>
+                                
+                                @foreach($typeContainer as $unTypeDeContainer)
+                                    @if(array_key_exists("qteReserver",$unTypeDeContainer))
+                                     <tr>
+                                     <td>{{ $unTypeDeContainer['libelleTypeContainer'] }}</td>
+                                     <td>{{ $unTypeDeContainer['qteReserver'] }}</td>
+                                     </tr>
+                                     @endif
+                                @endforeach
                                 
                             </tr>
                         </thead>
@@ -62,8 +71,7 @@
                                 <td></td>
                                 
                             </tr>
-                            @endif
-                            @endforeach
+
                         </tbody>
                     </table>
                     
@@ -81,7 +89,7 @@
 
     </div>
     <div class="col-lg-4">
-        <form action="" method="post" >
+        <form action="{{ route("FinaliserLaReservation") }}"" method="post" >
             {{ csrf_field() }}
             <button type="submit" id="buttonAddReservation" name="buttonAddReservation" class="btn btn-primary btn-lg">
                 Valider la demande de réservation

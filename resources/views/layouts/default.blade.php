@@ -63,7 +63,7 @@
                             Devis
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Consulter vos Devis</a>
+                            <a class="dropdown-item" href="{{route('ConsulterDevis')}}">Consulter vos Devis</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Supprimer un devis</a>
 
@@ -76,7 +76,7 @@
                             Tableau de Bord
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Nombre de réservations (par mois)</a>
+                            <a class="dropdown-item" href="{{route('NombreDeReservationParMois')}}">Nombre de réservations (par mois)</a>
                             <a class="dropdown-item" href="">Répartition géographique (par lieu de mise à disposition)</a>
                         </div>
 

@@ -8,7 +8,7 @@
 
 @section('content')
 
-<form action=""  method="post">
+<form action="{{ route("AjouterReservation") }}"  method="post">
     {{ csrf_field() }}
     <div class="row">
 
@@ -46,7 +46,11 @@
                             <label for="codeVilleMiseDisposition">Ville de mise à disposition</label>
                             <select class="custom-select" id="codeVilleMiseDisposition" name="codeVilleMiseDisposition">
                                 
-                                <option value=""> </option>
+                                @foreach($collectionVilles as $uneVille)
+                                    <option value="{{ $uneVille["codeVille"] }}">
+                                    {{$uneVille["nomVille"]}}
+                                    </option>
+                                @endforeach
                                 
                             </select>  
 
@@ -56,7 +60,12 @@
                             <label for="codeVilleRendre">Ville de restitution</label>
                             <select class="custom-select" id="codeVilleRendre" name="codeVilleRendre">
                                 
-                                <option value=""> </option>
+                                 @foreach($collectionVilles as $uneVille)
+                                    <option value="{{ $uneVille["codeVille"] }}">
+                                    {{$uneVille["nomVille"] }}
+                                    </option>
+                                @endforeach
+
                                 
                             </select>  
 

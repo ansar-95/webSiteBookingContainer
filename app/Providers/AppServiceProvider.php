@@ -22,7 +22,8 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        
+        include_once base_path('config-propel/propel.config.php'); 
     }
+    
 
 }
