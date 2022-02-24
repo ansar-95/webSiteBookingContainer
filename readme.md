@@ -20,4 +20,4 @@ L'application propose un module de gestion des réservations de container, de ge
 + Classe DB (Laravel) : classe d'accès aux données proposée par le Framework Laravel
 + Propel : ORM d'accès aux données 
 
-### Architecture Model Vew Controller
+### Architecture Model View Controller
