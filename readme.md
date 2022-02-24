@@ -16,10 +16,8 @@ L'application propose un module de gestion des réservations de container, de ge
 ### Framework : Laravel
 
 ### Accès aux données :
-Les différents TD (et Tp) s'appuient sur des méthodes d'accès aux données différentes.
-
 + Classe DBA : fichier de fonctions d'accès aux données via la classe PDO
 + Classe DB (Laravel) : classe d'accès aux données proposée par le Framework Laravel
-+ Eloquent (Laravel) : ORM d'accès aux données proposé par le Framework Laravel
 + Propel : ORM d'accès aux données 
 
+### Architecture Model Vew Controller
